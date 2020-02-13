@@ -5,18 +5,34 @@ import java.util.Scanner;
 public class bf_2231 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
+		
 		int num = in.nextInt();
 		int unit = 1;
 		int count =0;
-		while(num/unit!=0){
-			unit=1*10;
-			count++;
+		int p=0;
+		int q=p;
+		String temp="";
+		while(p<=num){
+			q = p;
+			temp = Integer.toString(q);
+			for(int i=0;i<temp.length();i++){
+				q += Character.getNumericValue(temp.charAt(i));
+			}
+			if(num==q){
+				break;
+			}
+			p++;
 		}
-			System.out.println(count);
-		
+		if(num<p){
+			System.out.println(0);
+		}
+		else{
+			System.out.println(p);
+		}
 		
 	}
 
 }
+
+

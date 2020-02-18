@@ -1,8 +1,8 @@
 package baekjoon;
 
 import java.util.Scanner;
-
-public class blackjack {
+//실패(런타임에러)
+public class array_2798 {
 
 	public static void main(String[] args) {
 		

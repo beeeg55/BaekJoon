@@ -11,9 +11,9 @@ public class math_10951 {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		while(true){
-			String s = br.readLine();
+		boolean next = true;
+		while(next){
+			String s = br.readLine
 			StringTokenizer st =new StringTokenizer(s," ");
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());

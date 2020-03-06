@@ -57,5 +57,4 @@ public class stack_10828 {
 				break;
 		}
 	}
-
 }

@@ -9,7 +9,7 @@ public class stack_9012 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
-		/*
+		/* 방법1
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int num = Integer.parseInt(br.readLine());
 		
@@ -36,7 +36,7 @@ public class stack_9012 {
 			}
 		}
 		*/
-		
+		//스택을 이용한 방법
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int num = Integer.parseInt(br.readLine());
 		

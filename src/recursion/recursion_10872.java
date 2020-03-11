@@ -1,8 +1,8 @@
-package factorial;
+package recursion;
 
 import java.util.Scanner;
 
-public class factorial {
+public class recursion_10872 {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);

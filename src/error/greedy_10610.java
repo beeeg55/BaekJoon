@@ -1,4 +1,4 @@
-package greedy;
+package error;
 //런타임에러
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package stack;
+package error;
 //메모리초과
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -1,4 +1,4 @@
-package sort;
+package error;
 //¹Ì¿Ï¼º
 import java.io.BufferedReader;
 import java.io.IOException;

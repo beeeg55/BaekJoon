@@ -1,4 +1,4 @@
-package greedy;
+package error;
 //다시해보기
 import java.util.Arrays;
 import java.util.Scanner;

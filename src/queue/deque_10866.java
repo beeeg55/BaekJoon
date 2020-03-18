@@ -1,6 +1,6 @@
-package array;
+package queue;
 
-public class array_1159 {
+public class deque_10866 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

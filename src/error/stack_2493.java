@@ -1,4 +1,4 @@
-package stack;
+package error;
 //¹Ì¿Ï¼º
 import java.util.Scanner;
 import java.util.Stack;

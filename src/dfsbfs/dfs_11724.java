@@ -25,7 +25,7 @@ public class dfs_11724 {
 		
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
-		
+		Character.getNumericValue(0)
 		map = new int[n+1][n+1];
 		visit = new boolean[n+1];
 		

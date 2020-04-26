@@ -31,7 +31,7 @@ public class hash_1157 {
 		Iterator iterator = set.iterator();
 		while(iterator.hasNext()){
 			  char key = (char)iterator.next();
-			  if(hm.get(key)==Collections.max(values)){
+			  if(hm.get(key).equals(Collections.max(values))){
 				  answer= key;
 				  count++;
 			  }

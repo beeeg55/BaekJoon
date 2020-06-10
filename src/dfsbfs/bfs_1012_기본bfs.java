@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class bfs_1012 {
+public class bfs_1012_±âº»bfs {
 	static int map[][];
 	static boolean vmap[][];
 	static int rl[] = {0,0,-1,1};

@@ -5,137 +5,70 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.LinkedList;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.StringTokenizer;
 
 public class queue_18258 {
 
-	
-	public static void main(String[] args) throws IOException {
-		
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
-		LinkedList<Integer> q = new LinkedList<>();
-		String n = br.readLine();
-		int num1 = Integer.parseInt(n);
-		
-		for(int i=0; i<num1; i++) {
+		int n = Integer.parseInt(br.readLine());
+		Deque<Integer> dq = new ArrayDeque<Integer>();
+		for(int i=0;i<n;i++){
 			String s = br.readLine();
-			StringTokenizer stk = new StringTokenizer(s," ");
-			String a = stk.nextToken();
-			int num = 0;
-			switch(a) {
-			case "push":
-				int b = Integer.parseInt(stk.nextToken());
-				q.add(b);
-				break;
-
-			case "pop":
-				num = q.isEmpty()?-1:q.pop();
-				bw.write(String.valueOf(num));
-				bw.newLine();
-				bw.flush();
-				break;
-
-			case "size":
-				num = q.size();
-				bw.write(String.valueOf(num));
-				bw.newLine();
-				bw.flush();
-				break;
-
-			case "empty":
-				num = q.isEmpty()?1:0;
-				bw.write(String.valueOf(num));
-				bw.newLine();
-				bw.flush();
-				break;
-
-			case "front":
-				num = q.isEmpty()?-1:q.peek();  
-				bw.write(String.valueOf(num));
-				bw.newLine();
-				bw.flush();
-				break;
-
-			case "back":
-				num = q.isEmpty()?-1:q.get(q.size()-1);
-				bw.write(String.valueOf(num));
-				bw.newLine();
-				bw.flush();
-				break;
-
-			}
-		}
-		/*for(int i=0;i<num1;i++){
-			String s = br.readLine();
-			StringTokenizer stk = new StringTokenizer(s," ");
-			String a = stk.nextToken();
-			int num = 0;
-			switch(a){
-				case "push":
-					int b = Integer.parseInt(stk.nextToken());
-					qu.add(b);
-					break;
-				case "empty":
-					if(qu.isEmpty() == false){
-						bw.write(String.valueOf(0));
+			StringTokenizer st = new StringTokenizer(s," ");
+			switch(st.nextToken()){
+				case "front" :
+					if(dq.isEmpty()){
+						bw.write(Integer.toString(-1));
 						bw.newLine();
-						bw.flush();
-					}
-					else{
-						bw.write(String.valueOf(1));
+					}else{
+						bw.write(Integer.toString(dq.peekFirst()));
 						bw.newLine();
-						bw.flush();
 					}
 					break;
-				case "size":
-					bw.write(String.valueOf(qu.size()));
+				case "back" :
+					if(dq.isEmpty()){
+						bw.write(Integer.toString(-1));
+						bw.newLine();
+					}else{
+						bw.write(Integer.toString(dq.peekLast()));
+						bw.newLine();
+					}
+					break;
+				case "size" :
+					bw.write(Integer.toString(dq.size()));
 					bw.newLine();
-					bw.flush();
 					break;
-				case "front":
-					if(qu.isEmpty()==true){
-						bw.write(String.valueOf(-1));
+				case "empty" :
+					if(dq.isEmpty()){
+						bw.write(Integer.toString(1));
 						bw.newLine();
-						bw.flush();
-					}
-					else{ 
-						bw.write(String.valueOf(qu.peek()));
+					}else{
+						bw.write(Integer.toString(0));
 						bw.newLine();
-						bw.flush();
 					}
 					break;
-				case "back":
-					if(qu.isEmpty()==true){
-						bw.write(String.valueOf(-1));
+				case "pop" :
+					if(dq.isEmpty()){
+						bw.write(Integer.toString(-1));
 						bw.newLine();
-						bw.flush();
-					}
-					else{ 
-						bw.write(String.valueOf(qu.get(qu.size()-1)));
+					}else{
+						bw.write(Integer.toString(dq.pop()));
 						bw.newLine();
-						bw.flush();
 					}
 					break;
-				case "pop":
-					if(qu.isEmpty()==true){
-						bw.write(String.valueOf(-1));
-						bw.newLine();
-						bw.flush();
-					}
-					else{ 
-						bw.write(String.valueOf(qu.pop()));
-						bw.newLine();
-						bw.flush();
-					}
-					break;
+				default :
+					dq.add(Integer.parseInt(st.nextToken()));
+					
 			}
 		}
-		*/
-		br.close();
+		bw.flush();
 		bw.close();
+		
 	}
 
 }

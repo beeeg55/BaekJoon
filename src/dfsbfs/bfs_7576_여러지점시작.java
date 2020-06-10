@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class dfs_7576 {
+public class bfs_7576_여러지점시작 {
 	static int map[][];
 	static boolean visit[][];
 	static int M,N;

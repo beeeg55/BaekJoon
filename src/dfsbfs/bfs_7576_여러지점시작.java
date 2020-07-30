@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class bfs_7576_¿©·¯ÁöÁ¡½ÃÀÛ {
+public class bfs_7576_ì—¬ëŸ¬ì§€ì ì‹œì‘{
 	static int map[][];
 	static boolean visit[][];
 	static int M,N;
@@ -20,7 +20,7 @@ public class bfs_7576_¿©·¯ÁöÁ¡½ÃÀÛ {
 		 for (int i = 0; i < N; i++) {
 	            for (int j = 0; j < M; j++) {
 	                if (map[i][j] == 1)
-	                    //ÀÍÀº Åä¸¶Åä°¡ ÀÖ´Â ¸ğµç À§Ä¡¸¦ Å¥¿¡ ´ã´Â´Ù.
+	                    //ï¿½ï¿½ï¿½ï¿½ ï¿½ä¸¶ï¿½ä°¡ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ Å¥ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
 	                	q.offer(new int[] {i,j});
 	            }
 	        }

@@ -1,5 +1,3 @@
-package dfsbfs;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -29,8 +27,8 @@ public class Bfs_2251 {
  
         while(!q.isEmpty()) {
             int[] temp = q.poll();
-            int x = temp[0];
-            int y = temp[1];
+            int x = temp[0]; // 옮길 물통 
+            int y = temp[1]; // 옮겨질 물통 
             int z = bottle[2]-x-y;
  
             for(int k=0; k<6; k++) {

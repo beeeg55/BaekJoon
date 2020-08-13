@@ -26,7 +26,7 @@ public class disjointset_1976 {
 			for (int j = 1; j < N+1; j++) {
 				map[i][j] = Integer.parseInt(st.nextToken());
 				if(map[i][j]==1) {
-					union(i,j); // 이어져있을 시 유니언 
+					union(i,j); // 이어져있을 시 유니언 연산 (사이클 여부와 상관 없이 연결만 되면 된다. )
 				}
 			}
 		}
@@ -36,7 +36,7 @@ public class disjointset_1976 {
 		int parent = parents[point];
 		for (int i = 1; i < M; i++) {
 			int next = Integer.parseInt(st.nextToken());
-			if(find(next) != parent) {
+			if(find(next) != parent) { // 루트가 같지 않으면  
 				System.out.println("NO");
 				break;
 			}

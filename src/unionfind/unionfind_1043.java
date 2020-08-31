@@ -36,7 +36,7 @@ public class unionfind_1043 {
 			for (int j = 0; j < n-1; j++) {
 				union(temp[j],temp[j+1]);
 			}
-			checkAfter[i] = temp[0];
+			checkAfter[i] = temp[0]; // 모두 연결시켜놨으므로 맨앞 하나만 검사용으로 저장해둠 
 		}
 		for (int i = 0; i < M; i++) {
 			if(find(checkAfter[i])!=0) {
@@ -53,7 +53,7 @@ public class unionfind_1043 {
 		}
 	}
 	private static int find(int a) {
-		if(parents[a] == 0) return 0;
+		if(parents[a] == 0) return 0; // 무조건 부모가 0이 되게 할거기 때문에 
 		if(parents[a] == a) return a;
 		return parents[a] = find(parents[a]);
 	}

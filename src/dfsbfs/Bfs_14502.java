@@ -10,7 +10,6 @@ import java.util.StringTokenizer;
 
 public class Bfs_14502 {
 
-	static int[][] wall;
 	private static int N;
 	private static int M;
 	static int[] dr = { -1, 0, 1, 0 };
@@ -27,7 +26,6 @@ public class Bfs_14502 {
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		N = Integer.parseInt(st.nextToken());
 		M = Integer.parseInt(st.nextToken());
-		wall = new int[3][2];
 		lab = new int[N][M];
 		countWall = 0;
 		for (int i = 0; i < N; i++) {
@@ -45,10 +43,7 @@ public class Bfs_14502 {
 
 	private static void combination(int start, int cnt) {
 		if (cnt == 3) {
-			for (int i = 0; i < 3; i++) {
-				lab[wall[i][0]][wall[i][1]] = 1;
-			}
-
+			
 			visit = new boolean[N][M];
 			int size = 0;
 			for (int i = 0; i < N; i++) {
@@ -62,18 +57,16 @@ public class Bfs_14502 {
 				answer = size;
 
 			}
-			for (int i = 0; i < 3; i++) {
-				lab[wall[i][0]][wall[i][1]] = 0;
-			}
+			
 			return;
 
 		}
 		for (int i = start; i < N*M; i++) {
 
 			if (lab[i/M][i%M] == 0) {
-				wall[cnt][0] = i/M;
-				wall[cnt][1] = i%M;
-					combination(i+ 1, cnt + 1);
+				lab[i/M][i%M] = 1;
+				combination(i+ 1, cnt + 1);
+				lab[i/M][i%M] = 0;
 			}
 		}
 

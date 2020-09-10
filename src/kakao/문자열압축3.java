@@ -4,10 +4,9 @@ public class 문자열압축3 {
 	public int solution(String s) {
 	       int answer = Integer.MAX_VALUE;
 		        //압축 길이
-		        for (int len = 1; len <= s.length()/2 + s.length()%2; len++) {
+		        for (int len = 1; len <= s.length()/2; len++) {
 		
-		            StringBuilder sb = new StringBuilder("");
-		
+		            StringBuilder sb = new StringBuilder();
 		            int left	= 0;
 		            int right 	= left+len;
 		            int cnt 	= 1;

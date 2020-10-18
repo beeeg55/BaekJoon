@@ -38,5 +38,6 @@ public class dfs_2606 {
 		dfs(1);
 		System.out.println(count);
 	}
+	
 
 }

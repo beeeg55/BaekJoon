@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main {
+public class implement_15685 {
 	static int[] dx = { 1, 0, -1, 0 };
 	static int[] dy = { 0, -1, 0, 1 };
 	private static boolean[][] visit;
